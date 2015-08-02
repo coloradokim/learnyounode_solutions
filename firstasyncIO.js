@@ -1,7 +1,7 @@
 var fs = require('fs')
+var file = process.argv[2]
 
-fs.readFile(process.argv[2], function (err, data) {
-  if (err) throw err;
-  var solution = data.toString().split('\n').length-1;
-  console.log(solution);
+fs.readFile(file, function (err, contents) {
+  var lines = contents.toString().split('\n').length-1
+  console.log(lines)
 });
